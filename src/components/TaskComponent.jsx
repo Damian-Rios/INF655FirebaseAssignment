@@ -12,6 +12,15 @@ export default function TaskComponent(){
 
     return (
         <div>
+            <h1>Task List:</h1>
+            <ul>
+                {tasks.map((task, index) => (
+                    <li
+                        key={index}>{task}
+                    </li>
+                ))}
+            </ul>
+    
             <h1>Complete This Task:</h1>
             <h3>{getRandomTask()}</h3>
         </div>
